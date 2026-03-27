@@ -8,6 +8,8 @@ import 'timetable_page.dart';
 import 'exams_page.dart';
 import 'progress_page.dart';
 import 'settings_page.dart';
+import 'profile_page.dart';
+import 'help_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -248,13 +250,15 @@ class _HomePageState extends State<HomePage> {
             const Divider(),
             drawerItem(Icons.person_outline, "Profile", () {
               Navigator.pop(context);
+              _goTo(const ProfilePage());
             }),
             drawerItem(Icons.settings, "Settings", () {
               Navigator.pop(context);
-              _goTo(SettingsPage());
+              _goTo(const SettingsPage());
             }),
             drawerItem(Icons.help_outline, "Help", () {
               Navigator.pop(context);
+              _goTo(const HelpPage());
             }),
             const Divider(),
             drawerItem(Icons.logout, "Logout", () async {
